@@ -20,7 +20,7 @@ import { type ChangelogEntry } from "@/lib/types"
 
 export default function DashboardPage() {
   const [view, setView] = useState<"home" | "changelog">("home")
-  const [entries, setEntries] = useState<ChangelogEntry[]>([])
+  const [entries, setEntries] = useState<ChangelogEntry[] | null>(null)
 
   useEffect(() => {
     fetch("/changelog.json")
@@ -62,7 +62,7 @@ export default function DashboardPage() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
           {view === "changelog" ? (
-            <Changelog entries={entries} />
+            <Changelog entries={entries ?? []} loading={entries === null} />
           ) : (
             <HeroPlaceholder />
           )}

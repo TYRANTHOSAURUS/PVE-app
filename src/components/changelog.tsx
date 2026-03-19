@@ -1,7 +1,11 @@
 import { ExternalLinkIcon } from "lucide-react"
 import { type ChangelogEntry } from "@/lib/types"
 
-export function Changelog({ entries }: { entries: ChangelogEntry[] }) {
+export function Changelog({ entries, loading }: { entries: ChangelogEntry[], loading?: boolean }) {
+  if (loading) {
+    return null
+  }
+
   if (entries.length === 0) {
     return (
       <div className="flex flex-1 items-center justify-center p-6">
