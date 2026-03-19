@@ -11,10 +11,17 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { NewspaperIcon } from "lucide-react"
+import { LayoutDashboardIcon, NewspaperIcon } from "lucide-react"
 
 const data = {
   navMain: [
+    {
+      title: "Dashboard",
+      url: "/dashboard",
+      icon: (
+        <LayoutDashboardIcon />
+      ),
+    },
     {
       title: "Changelog",
       url: "#changelog",
