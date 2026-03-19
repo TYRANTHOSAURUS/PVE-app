@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PVE — Project Vote Everything
 
-## Getting Started
+An app built entirely by the community. You decide what gets built.
 
-First, run the development server:
+## How It Works
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+PVE starts as a blank app. The community shares feature ideas on X (Twitter) and votes by liking posts. An autonomous agent monitors X for the most popular feature requests, and when a winner emerges, it uses Claude Code to implement the feature, push the code, and deploy — all automatically.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The cycle repeats: vote, build, ship. The community decides what this app becomes.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## The Loop
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Share a feature idea on X
+2. The community votes (likes)
+3. The agent picks up the winning idea
+4. Claude Code implements the feature
+5. Auto-deployed to production
+6. Repeat
 
-## Learn More
+## Live
 
-To learn more about Next.js, take a look at the following resources:
+**https://pve-beta.vercel.app**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Next.js 16 (App Router) + TypeScript
+- shadcn/ui + Tailwind CSS
+- Vercel (auto-deploy on push)
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Don't open PRs — share your ideas on X and let the community vote. The most popular idea wins.
